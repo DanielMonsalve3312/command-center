@@ -3,28 +3,12 @@ Technical test by Daniel Monsalve
 
 ### Getting Started
 
-For a dev version use:
+Run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-```
-
-For a production version use:
-
-```bash
-npm run build
-# or
-yarn build
-```
-
-and then
-
-```bash
-npm run start
-# or
-yarn start
 ```
 
 Project Organization:
