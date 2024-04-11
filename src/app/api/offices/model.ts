@@ -11,12 +11,11 @@ export class OfficeModel {
         return new Promise((res) => {
             setTimeout(() => {
                 res(filteredOffices);
-            }, 1500)
+            }, 1000)
         })
     }
 
     static async changeStatus ({ id }: {id: number}): Promise<Office | null> {
-
         const office = officesList.find(item => item.id === id);
         let updatedOffice: Office | null = null;
 
@@ -27,9 +26,7 @@ export class OfficeModel {
         }
 
         return new Promise((res) => {
-            setTimeout(() => {
-                res(updatedOffice);
-            }, 1500)
+            res(updatedOffice);
         })
     }
 }

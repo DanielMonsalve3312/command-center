@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Command Center
+Technical test by Daniel Monsalve
 
-## Getting Started
+### Getting Started
 
-First, run the development server:
+For a dev version use:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For a production version use:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+# or
+yarn build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+and then
 
-## Learn More
+```bash
+npm run start
+# or
+yarn start
+```
 
-To learn more about Next.js, take a look at the following resources:
+Project Organization:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`/src/app/api` In this section the API for the offices is created, the /office/model file is in charge of managing the local data served by the API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`/src/components` In this section you will find the global components of the application.
 
-## Deploy on Vercel
+`/src/componentes/atoms` This is the section for the smallest components of the application, following the Atomic Design specification.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`/src/layouts` Here are the components for the Layout, such as the Header and Footer
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`/src/modules` Here the application modules are defined and developed, each one separate and independent from the other, here you will find modules such as: home, auth, profile, etc.
+
+`/src/modules/home` Home module, with the Container, which is the file that includes the module, the module's own components and the utils folder that contains the hooks and functions of each module.
+
+`/src/types` Where the types of data that the application has are defined.
